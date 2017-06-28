@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "babel-runtime": "^6.23.0",
+    "office-ui-fabric-react": "^4.12.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "remotedev": "^0.2.7"
