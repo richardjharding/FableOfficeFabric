@@ -5,6 +5,8 @@
   <ItemGroup>
     <!-- Global to the app -->
     <Compile Include="src/Global.fs" />
+    <Compile Include="src/Fabric/fabric.fs"/>
+    <Compile Include="src/FabricDemo/View.fs"/>
     <!-- Info -->
     <Compile Include="src/Info/View.fs" />
     <!-- Counter -->

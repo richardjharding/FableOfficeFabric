@@ -12,6 +12,7 @@ let pageParser: Parser<Page->Page,Page> =
     map About (s "about")
     map Counter (s "counter")
     map Home (s "home")
+    map Fabric (s "fabric")
   ]
 
 let urlUpdate (result: Option<Page>) model =
