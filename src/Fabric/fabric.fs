@@ -11,12 +11,16 @@ open System
 let styles = JsInterop.importAll<obj> "office-ui-fabric-react/dist/sass/fabric.scss"
 
 
-type [<Pojo>] IIconProps=
-    {iconName: string}
+type IIconProps=
+    | IconName of string
 
-type [<Pojo>] IButtonProps =
-    { text: string
-      iconProps: IIconProps}
+type IButtonProps =
+    | Text of string
+    | IconProps of IIconProps list
 
-let DefaultButton = import<ComponentClass<IButtonProps>> "DefaultButton" "office-ui-fabric-react/lib/components/button"
-let inline defaultButton b c = React.from DefaultButton b c
+
+
+let DefaultButton: ComponentClass<obj> =
+     import "DefaultButton" "office-ui-fabric-react/lib/components/button"
+let inline defaultButton (props: IButtonProps list) c =
+     React.from DefaultButton (keyValueList CaseRules.LowerFirst props) c

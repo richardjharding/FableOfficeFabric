@@ -13,5 +13,7 @@ let root =
       p
         [ ]
         [ str "This pages exists to test the fabric ui bindings." ]
-      defaultButton {text = "Foo"; iconProps= {iconName= "Add"}} []  
+      defaultButton [IButtonProps.Text "Foo"
+                     IconProps [IconName "Add"]
+                     ] []  
          ]
